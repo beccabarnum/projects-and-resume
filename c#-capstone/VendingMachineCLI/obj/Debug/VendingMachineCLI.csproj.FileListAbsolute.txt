@@ -1,0 +1,10 @@
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\VendingMachineCLI\bin\Debug\VendingMachineCLI.exe.config
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\VendingMachineCLI\bin\Debug\VendingMachineCLI.exe
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\VendingMachineCLI\bin\Debug\VendingMachineCLI.pdb
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\VendingMachineCLI\bin\Debug\VendingMachine.dll
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\VendingMachineCLI\bin\Debug\VendingMachine.pdb
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\VendingMachineCLI\obj\Debug\VendingMachineCLI.csprojAssemblyReference.cache
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\VendingMachineCLI\obj\Debug\VendingMachineCLI.csproj.CoreCompileInputs.cache
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\VendingMachineCLI\obj\Debug\VendingMachineCLI.csproj.CopyComplete
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\VendingMachineCLI\obj\Debug\VendingMachineCLI.exe
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\VendingMachineCLI\obj\Debug\VendingMachineCLI.pdb

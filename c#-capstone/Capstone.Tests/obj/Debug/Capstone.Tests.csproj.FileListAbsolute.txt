@@ -1,0 +1,16 @@
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\Capstone.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\Capstone.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\Capstone.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\Capstone.Tests\bin\Debug\Capstone.Tests.dll
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\Capstone.Tests\bin\Debug\Capstone.Tests.pdb
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\Capstone.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\Capstone.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\Capstone.Tests\bin\Debug\VendingMachine.dll
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\Capstone.Tests\bin\Debug\VendingMachine.pdb
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\Capstone.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\Capstone.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\Capstone.Tests\obj\Debug\Capstone.Tests.csprojAssemblyReference.cache
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\Capstone.Tests\obj\Debug\Capstone.Tests.csproj.CoreCompileInputs.cache
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\Capstone.Tests\obj\Debug\Capstone.Tests.csproj.CopyComplete
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\Capstone.Tests\obj\Debug\Capstone.Tests.dll
+C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\Capstone.Tests\obj\Debug\Capstone.Tests.pdb
