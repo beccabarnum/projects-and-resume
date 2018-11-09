@@ -50,19 +50,16 @@ namespace Capstone
         private void ReadFile()
         {
             string fileName = "vendingmachine.csv";
-            string fileDirectory = Environment.CurrentDirectory;
-            //string fullPath = @"C:\Workspace\team\week-4-pair-exercises-team-3\c#-capstone\etc\vendingmachine.csv";
+            string fileDirectory = @"..\..\..\etc\";
             string fullPath = Path.Combine(fileDirectory, fileName);
-            using (StreamReader file = new StreamReader(fileName))
+            using (StreamReader file = new StreamReader(fullPath))
             {
                 List<string> itemList = new List<string>();
 
                 while (!file.EndOfStream)
                 {
                     string line = file.ReadLine();
-                    //List<string> lineList = new List<string>();
 
-                    //lineList.AddRange(line.Split('|'));
                     var lineList = line.Split('|');
 
                     if (lineList[3] == "Chip")
@@ -145,28 +142,5 @@ namespace Capstone
         {
             _runningTotal = 0;
         }
-        //public string ItemName { get; set; } 
-        //public double ItemPrice { get; set; } 
-
-        //public void DispenseItems(string itemRequest)
-        //{
-        //    string dispensedItem = "";
-
-        //    foreach (VendingItem item in _inventory.Values)
-        //    {
-
-        //        if (item.ItemLocation == itemRequest)
-        //        {
-        //            ItemName = item.Name;
-        //            ItemPrice = item.Price;
-        //            //add each dispensed item to a list
-        //            dispensedItem = ItemName + ItemPrice.ToString("C");
-        //            _itemsDispensed.Add(dispensedItem);
-        //            _itemsPurchased.Add(item);
-        //        }
-
-        //    }
-
-        //}
     }
 }

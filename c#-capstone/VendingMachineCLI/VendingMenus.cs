@@ -141,7 +141,6 @@ namespace Capstone
                         Console.WriteLine($"Your money available to spend is: {_vm.TotalMoney.ToString("C")}");
                         Console.Write("Please enter the item location (or press 'q' to quit): ");
 
-                        //if statement
                         _itemSelection = Console.ReadLine().ToUpper();
                         if (_itemSelection == "Q")
                         {
