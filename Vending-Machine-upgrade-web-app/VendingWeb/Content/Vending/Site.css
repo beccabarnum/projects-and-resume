@@ -1,0 +1,52 @@
+﻿.footer {
+    position: relative;
+    text-align:center;
+    background-color:cornflowerblue;
+    padding:5px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    font-weight: bold;
+    font-size:small;
+}
+
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -25px;
+}
+
+.push {
+    height: 25px;
+}
+body{
+    height:100%;
+    margin:0;
+}
+html {
+    min-height: calc(100vh-60px);
+    height: 100%;
+    margin: 0;
+}
+.jumbotron {
+    background-image: linear-gradient(to right, black, cornflowerblue);
+    background-position-y: 25%;
+    margin: 0 !important;
+    background-size: cover;
+    font-weight: bold;
+    max-height:175px;
+    color:white;
+}
+.navbar {
+    background-image: linear-gradient(to right, black, cornflowerblue) !important;
+    color: white !important;
+}
+.nav-link {
+    color: silver !important;
+}
+.active a{
+    color: white !important;
+}
+.VNDR{
+    color:white !important;
+}

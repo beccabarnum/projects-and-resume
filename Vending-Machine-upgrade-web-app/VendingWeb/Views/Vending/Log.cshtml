@@ -1,0 +1,46 @@
+﻿@section StyleSheet {
+    <link rel="stylesheet" href="~/Content/Vending/Log.css" />
+}
+
+@section Scripts {
+    <script src="~/Scripts/Vending/Log.js" defer></script>
+}
+
+@section Title {
+    Log
+}
+
+
+<div class="container" id="logBox">
+
+    <div class="logHeading">
+        <div class="logTitle">Log</div>
+
+
+        <div>
+            <select id="logType">
+                <option value="all">All Transactions</option>
+                <option value="feed">Feed Money</option>
+                <option value="giveChange">Give Change</option>
+                <option value="purchaseItem">Purchases</option>
+            </select>
+        </div>
+    </div>
+    <div class="row headerRow">
+
+        <div class="col-sm-1"></div>
+        <div class="col content">
+            Date
+        </div>
+        <div class="col transaction content">
+            Action
+        </div>
+        <div class="col amount content">
+            Amount
+        </div>
+        <div class="col runnTotal content">
+            Total
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+</div>

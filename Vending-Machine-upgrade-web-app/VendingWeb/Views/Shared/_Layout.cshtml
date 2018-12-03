@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Vending/Site.css" rel="stylesheet" type="text/css" />
+    @RenderSection("StyleSheet", false)
+
+    @*<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>*@
+
+    <script src="~/Scripts/jquery-3.3.1.js" defer></script>
+    <script src="~/Scripts/jquery.validate.js" defer></script>
+    <script src="http://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.js " defer></script>
+    @*<script src="~/Scripts/popper.js" defer></script>*@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="~/Scripts/bootstrap.min.js" defer></script>
+    @RenderSection("Scripts", false)
+
+    @*<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>*@
+
+
+
+    <title>@RenderSection("Title", true)</title>
+
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container lowerit">
+                <h1 class="display-4">VNDR.</h1>
+                 <p class="lead">GIVE US YOUR CASH, WE'LL GIVE YOU SOME FOOD</p>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand VNDR" href="~/Vending/Index">VNDR.</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active homeNav">
+                        <a class="nav-link" href="~/Vending/Index">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item reportNav">
+                        <a class="nav-link" href="~/Vending/Report">Report</a>
+                    </li>
+                    <li class="nav-item logNav">
+                        <a class="nav-link" href="~/Vending/Log">Log</a>
+                    </li>
+                    <li class="nav-item aboutNav">
+                        <a class="nav-link" href="~/Vending/About">About</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section>
+            @RenderBody()
+        </section>
+        <div class="push"></div>
+    </div>
+    <div class="footer">
+       Tech Elevator Copyright 2018
+    </div>
+</body>
+</html>
