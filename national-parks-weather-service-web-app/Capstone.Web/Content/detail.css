@@ -1,0 +1,47 @@
+﻿body {
+}
+h1 {
+    background-color: lightgray;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-width: 1400px;
+    text-align: center;
+    margin: auto;
+}
+.quote {
+    align-content: center;
+}
+.image {
+    width: 100%;
+    display: block;
+    /*position: center;*/
+    max-height: 500px;
+    max-width: 1400px;
+    margin: auto;
+    /*text-align: center;*/
+}
+.quote {
+    width: 100%;
+    text-align: center;
+}
+.park-facts {
+    display: block;
+    width: 100%;
+    position: center;
+}
+.first-column {
+    display: inline-block;
+    min-width: 200px;
+}
+.second-column, .weather-link {
+    display: inline-block;
+}
+.weather-link {
+    font-weight: bold;
+    padding-left: 15%;
+    padding-top: 2%;
+    vertical-align: top;
+    height: 100%;
+    top: 80%;
+    width: 200px;
+}

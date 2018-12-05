@@ -1,0 +1,19 @@
+﻿@using Capstone.Web.Models
+@model Capstone.Web.Models.HomeViewModel
+
+@foreach (var park in Model.Parks)
+{
+    <div class="home-list-block">
+        <div>
+            <a href="~/Detail/Detail/@(park.ParkCode.ToString())"><img class="home-image" src=" ~/content/@(park.ParkCode).jpg" alt="@(park.ParkName)"></a>
+        </div>
+        <div>
+            <div>
+                <h1 class="home-park-name">@park.ParkName</h1>
+            </div>
+            <div class="home-location">Location: @park.State</div>
+            <div class="park-descript">@park.ParkDescription</div>
+        </div>
+    </div>
+    <hr />
+}

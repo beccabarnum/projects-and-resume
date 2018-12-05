@@ -1,0 +1,83 @@
+﻿body {
+}
+
+h1{
+    text-align: center;
+    margin: auto;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    
+}
+.detail-link {
+    text-align: center;
+}
+.weather-container {
+    display: block;
+    width: 90%;
+    margin-left: 70px;
+}
+.todays-forecast {
+    display: inline-block;
+    width: 30%;
+    padding-bottom: 5px;
+}
+    .todays-forecast > div {
+        margin-left: 15%;
+    }
+.todays-forecast h2 {
+    margin-left: 28%;
+}
+.todays-forecast img {
+    width: 100%;
+    align-content: center;
+}
+.highlow {
+    display: inline-block;
+    margin: auto;
+    padding: 20px 7px 15px 0px;
+}
+
+.week-forecast {
+    display: inline-block;
+    vertical-align: top;
+    width: 65%;
+    padding-top: 80px;
+}
+.week-forecast div {
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    padding-left: 10px;
+}
+.week-forecast img {
+    width: 100%;
+    margin-left: 18px;
+}
+.highlow-week div {
+    display: block;
+    width: 60px;
+    text-align: left;
+    margin-left: 0px;
+    padding-left: 0px;
+    font-size: smaller;
+}
+.high, .low {
+    font-weight: bold;
+}
+.high {
+    color: darkred;
+}
+.low {
+    color: steelblue;
+}
+.tips {
+    font-size: smaller;
+}
+.current-F-Or-C {
+    font-size: smaller;
+    margin-bottom: 2px;
+}
+
+.weather-image{
+    border-radius: 50%;
+}

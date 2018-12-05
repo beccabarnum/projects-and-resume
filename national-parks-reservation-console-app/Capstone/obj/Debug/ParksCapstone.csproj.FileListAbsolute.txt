@@ -1,0 +1,7 @@
+C:\Workspace\team\week-6-pair-exercises-team-3\capstone\Capstone\bin\Debug\Capstone.exe.config
+C:\Workspace\team\week-6-pair-exercises-team-3\capstone\Capstone\bin\Debug\Capstone.exe
+C:\Workspace\team\week-6-pair-exercises-team-3\capstone\Capstone\bin\Debug\Capstone.pdb
+C:\Workspace\team\week-6-pair-exercises-team-3\capstone\Capstone\obj\Debug\ParksCapstone.csprojAssemblyReference.cache
+C:\Workspace\team\week-6-pair-exercises-team-3\capstone\Capstone\obj\Debug\ParksCapstone.csproj.CoreCompileInputs.cache
+C:\Workspace\team\week-6-pair-exercises-team-3\capstone\Capstone\obj\Debug\Capstone.exe
+C:\Workspace\team\week-6-pair-exercises-team-3\capstone\Capstone\obj\Debug\Capstone.pdb

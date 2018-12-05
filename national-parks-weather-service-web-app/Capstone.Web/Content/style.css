@@ -1,0 +1,129 @@
+﻿body {
+    background-image: url(background.gif);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 90%;
+    font-family: sans-serif;
+    margin: 0 auto;
+}
+
+ul {
+    padding: 0px;
+}
+
+header {
+    margin: 25px;
+}
+
+    header img {
+        height: 110px;
+    }
+
+nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+    nav ul li {
+        background-color: lightblue;
+        border-radius: 8px;
+        list-style: none;
+        text-align: center;
+        flex-grow: 1;
+        padding-top: 5px;
+        margin: 0 10px;
+        max-width: 200px;
+    }
+
+section {
+    clear: both;
+    display: block;
+    width: 90%;
+    margin: 20px auto;
+    vertical-align: top;
+    min-height: 450px;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 7px;
+    padding: 10px;
+}
+
+/*Home page*/
+.home-list-block {
+    display: block;
+    position: relative;
+    min-height: 350px;
+    width: 100%;
+    padding-top: 2%;
+}
+
+.home-image {
+    display: inline-block;
+    float: left;
+    height: auto%;
+    max-width: 100%;
+    position: relative;
+    padding-right: 10px;
+}
+
+.home-park-name {
+    text-align: center;
+    margin: auto;
+}
+.home-location, .park-descript {
+    font-weight: bold;
+    padding-top: 2%;
+}
+
+/* Survey page*/
+.survey-title {
+    display: inline-block;
+}
+.survey-link {
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 10%;
+}
+.survey-row {
+    width: 200px;
+    display: inline-block;
+}
+
+.error-text {
+    color: red;
+}
+
+.survey-button {
+    margin-left: 200px;
+}
+
+
+/*Survey Results*/
+.results-title {
+    text-align: center;
+}
+.survey-block {
+    display: block;
+    position: relative;
+    min-height: 200px;
+    width: 100%;
+    padding-left: 10px;
+}
+.survey-image {
+    display: inline;
+    float: left;
+    height: 200px;
+    width: auto;
+    position: relative;
+    padding-right: 10px;
+}
+.survey-park-name {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+}
+.survey-count {
+    color: darkred;
+    font-weight: bold;
+}

@@ -1,0 +1,46 @@
+﻿
+@model Capstone.Web.Models.Park
+
+<link rel="stylesheet" href="~/Content/detail.css" />
+
+    <img class="image" src=" ~/content/@(Model.ParkCode.ToLower()).jpg" alt="@(Model.ParkName)">
+
+    <h1>@Model.ParkName</h1>
+
+<hr />
+<div class="quote">
+    <i>@Model.InspirationalQuote <br />- @Model.QuoteSource</i>
+
+</div>
+<hr />
+<br />
+
+<div class="park-facts">
+    <div class="first-column">
+        <div><b>State:</b>  @Model.State</div>
+        <div><b>Acreage:</b>  @Model.Acreage.ToString("N0")</div>
+        <div><b>Miles of Trail:</b>  @Model.MilesofTrail.ToString("N0")</div>
+        <div><b>Climate:</b>  @Model.ClimateType</div>
+        <div><b>Number of Species:</b>  @Model.NumberOfSpecies</div>
+    </div>
+    <div class="second-column">
+        <div class="second-column"><b>Founded:</b>  @Model.YearFounded</div>
+        <div><b>Elevation:</b>  @Model.ElevationInFeet.ToString("N0") ft.</div>
+        <div><b>Number of Campsites:</b>  @Model.NumberOfCampsites</div>
+        <div><b>Annual Visitor Count:</b>  @Model.AnnualVisitorCount.ToString("N0")</div>
+        <div><b>Entry Fee:</b>  @Model.EntryFee.ToString("C")</div>
+    </div>
+    <div class="weather-link">
+        @Html.ActionLink($"View {Model.ParkName}'s Weather Forecast", "Weather", "Detail")
+
+    </div>
+</div>
+<hr />
+<br />
+
+<div >@Model.ParkDescription</div>
+<br />
+<br />
+<br />
+
+

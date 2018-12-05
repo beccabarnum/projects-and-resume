@@ -1,0 +1,28 @@
+﻿@using Capstone.Web.Models
+@model List<Capstone.Web.Models.SurveyResultModel>
+
+<h1 class="results-title">Favorite Park Survey Results</h1>
+<p class="results-title">Here are the National Parks listed in order from most popular to least, based on user survey count:</p>
+<hr />
+@foreach (SurveyResultModel park in Model)
+{
+    <div class="survey-block">
+        <div>
+            <a href="~/Detail/Detail/@(park.ParkCode.ToString())"><img class="survey-image" src=" ~/content/@(park.ParkCode).jpg" alt="@(park.ParkName)"></a>
+        </div>
+        <div>
+            <div class="survey-park-name">
+                @park.ParkName
+            </div>
+            <br />
+            <div class="survey-count">
+                Number of votes: @park.SurveyCount
+            </div>
+            <br />
+            <div>
+                @park.ParkDesc
+            </div>
+        </div>
+    </div>
+    <hr />
+}

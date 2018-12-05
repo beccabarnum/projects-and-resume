@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>National Park Geek</title>
+    <link rel="stylesheet" href="~/Content/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="~/Content/logo.png" alt="National Park Geek Logo" />
+    </header>
+    <hr />
+    <nav>
+        <ul>
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("Survey", "Survey", "Survey")</li>
+        </ul>
+    </nav>
+    <hr />
+    <section>
+        @RenderBody()
+    </section>
+</body>
+</html>
