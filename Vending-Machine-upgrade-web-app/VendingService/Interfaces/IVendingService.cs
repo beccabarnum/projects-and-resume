@@ -11,7 +11,15 @@ namespace VendingService.Interfaces
     {
         //Vending
         List<VendingItem> GetVendingItems();
-        
+
+        //User
+        int AddUserItem(UserItem item);
+        bool UpdateUserItem(UserItem item);
+        void DeleteUserItem(int userId);
+        UserItem GetUserItem(int userId);
+        UserItem GetUserItem(string username);
+        List<UserItem> GetUserItems();
+
         //Category
         int AddCategoryItem(CategoryItem item);
         bool UpdateCategoryItem(CategoryItem item);
@@ -38,6 +46,7 @@ namespace VendingService.Interfaces
         int AddVendingTransaction(VendingTransaction item);
         VendingTransaction GetVendingTransaction(int id);
         List<VendingTransaction> GetVendingTransactions();
+        List<VendingTransaction> GetVendingTransactionsForUser(int userId);
 
         //TransactionItem
         int AddTransactionItem(TransactionItem item);

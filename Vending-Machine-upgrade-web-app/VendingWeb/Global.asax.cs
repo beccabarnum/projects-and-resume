@@ -30,9 +30,9 @@ namespace VendingWeb
             var kernel = new StandardKernel();
 
             // Bind Database
-            //kernel.Bind<IVendingService>().To<MockVendingDBService>();
-            string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-            kernel.Bind<IVendingService>().To<VendingDBService>().WithConstructorArgument("connectionString", connectionString);
+            kernel.Bind<IVendingService>().To<MockVendingDBService>();
+            //string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            //kernel.Bind<IVendingService>().To<VendingDBService>().WithConstructorArgument("connectionString", connectionString);
 
             // Bind Log Service
             kernel.Bind<ILogService>().To<LogFileService>();

@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="File\LogFileService.cs" />
     <Compile Include="Helpers\InventoryManager.cs" />
+    <Compile Include="Helpers\PasswordHelper.cs" />
     <Compile Include="Helpers\TransactionManager.cs" />
     <Compile Include="Helpers\ReportManager.cs" />
     <Compile Include="Helpers\TestManager.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Models\ProductItem.cs" />
     <Compile Include="Models\Report.cs" />
     <Compile Include="Models\TransactionItem.cs" />
+    <Compile Include="Models\UserItem.cs" />
     <Compile Include="Models\VendingItem.cs" />
     <Compile Include="Models\VendingOperation.cs" />
     <Compile Include="Models\VendingTransaction.cs" />

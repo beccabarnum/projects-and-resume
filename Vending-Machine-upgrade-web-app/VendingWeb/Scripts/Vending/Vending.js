@@ -89,56 +89,77 @@ function getInventory() {
         type: "GET",
         dataType: "json"
     }).done(function (data) {
-        console.log("Inventory Loaded");
-        for (let i = 0; i < data.length; i++) {
-            card = $("<div>").addClass("card");
-            body = $("<div>").addClass("card-body");
-            title = $("<h5>").addClass("card-title");
-            header = $("<h5>").addClass("card-header");
-            image = $("<img>").addClass("card-img-top");
-            price = $("<div>").addClass("card-footer");
-            
-            
-            title.text(data[i].Product.Name);
-            header.text(data[i].Product.Name);
-            price.text(`$${data[i].Product.Price.toFixed(2)}`);
-            image.attr("src", data[i].Product.Image);
+        //console.log("Inventory Loaded");
+        $("#itemContainer").empty();
+        let itemCounter = 0;
+        for (let i = 0; i < data[data.length - 1].Inventory.Column; i++) {
+            column = $("<div>")
+            c = i + 1;
+            col = c.toString();
 
-            key = data[i].Inventory.Key;
-            card.attr("id", key);
+            for (let i = 0; i< data[data.length - 1].Inventory.Row; i++) {
 
-            col = data[i].Inventory.Column.toString();
-            row = data[i].Inventory.Row.toString();
-            image.addClass("itemImage");
-            card.css({ "grid-column": col, "grid-row": row, "width": "18rem"});
+                card = $("<div>").addClass("card");
+                title = $("<h5>").addClass("card-title");
+                header = $("<h5>").addClass("card-header");
+                image = $("<img>").addClass("card-img-top");
+                price = $("<div>").addClass("card-footer");
+                itemSoldOut = $("<h1>").addClass("card-text text-center align-middle");
 
-            card.addClass("debug");
-            card.data("Col", col);
-            card.data("Row", row);
-            card.append(header);
-            card.append(image);
-            
-            //qty = $("<p>").addClass("card-text")
-            //qty.text(`Qty: ${data[i].Inventory.Qty}`)
-            //body.append(qty);
+                title.text(data[itemCounter].Product.Name);
+                header.text(data[itemCounter].Product.Name);
+                card.append(header);
+                itemSoldOut.text("Sold Out");
+                price.text(`$${data[itemCounter].Product.Price.toFixed(2)}`);
+                if (data[itemCounter].Inventory.Qty > 0) {
+                    image.attr("src", data[itemCounter].Product.Image);
+                    card.append(image);
+                }
+                else {
+                    card.append(itemSoldOut);
+                }
 
-            card.append(body);
-            card.append(price);
-            if (data[i].Product.Price > yourBalance) {
-                card.addClass("cantClick");
-                card.on("click", notEnough);
+                key = data[itemCounter].Inventory.Key;
+                card.attr("id", key);
+
+                row = data[itemCounter].Inventory.Row.toString();
+                col = data[itemCounter].Inventory.Column.toString();
+
+                image.addClass("itemImage");
+                card.css({ "grid-row": row });
+                
+                card.data("Row", row);
+                card.data("Col", col)
+
+                card.append(price);
+
+                if (data[itemCounter].Inventory.Qty == 0) {
+                    card.addClass("cantClick");
+                    card.on("click", soldOut);
+                }
+                else if (data[itemCounter].Product.Price > yourBalance) {
+                    card.addClass("cantClick");
+                    card.on("click", notEnough);
+                }
+                else {
+                    card.on("click", purchaseProduct);
+                }
+                card.addClass("vendingItem")
+                column.append(card);
+                itemCounter++;
             }
-            else {
-                card.on("click", purchaseProduct);
-            }
-            
-            $("#itemContainer").append(card);
+
+            $("#itemContainer").append(column);
         }
     });
 }
 
 function notEnough(e) {
     updateStatus("fa-times-circle", "Not enough money", "Error");
+}
+
+function soldOut(e) {
+    updateStatus("fa-times-circle", "Item is sold out", "Error");
 }
 
 function purchaseProduct() {
@@ -154,13 +175,11 @@ function purchaseProduct() {
             col: prodCol
         }
     }).done(function (data) {
+        console.log(data);
         getBalance();
         let image = "fa-thumbs-up";
         if (data.Status === "Error") {
             image = "fa-times-circle";
-        }
-        else {
-            data.Message = "";
         }
         updateStatus(image, data.Message, data.Status);
         getInventory();

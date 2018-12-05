@@ -12,6 +12,27 @@ namespace VendingService.Helpers
 {
     public static class TestManager
     {
+        public static void PopulateDatabaseWithUsers(IVendingService db)
+        {
+            using (TransactionScope scope = new TransactionScope())
+            {
+                PasswordHelper passHelper = new PasswordHelper("Abcd!234");
+
+                UserItem item = new UserItem()
+                {
+                    FirstName = "Joe",
+                    LastName = "Piscapoe",
+                    Username = "jp",
+                    Email = "jp@gmail.com",      
+                };
+                item.Hash = passHelper.Hash;
+                item.Salt = passHelper.Salt;
+                item.Id = db.AddUserItem(item);
+                
+                scope.Complete();
+            }
+        }
+
         public static void PopulateDatabaseWithInventory(IVendingService db)
         {
             using (TransactionScope scope = new TransactionScope())
@@ -177,12 +198,14 @@ namespace VendingService.Helpers
         {
             using (TransactionScope scope = new TransactionScope())
             {
-                // Get a list of products
+                // Get a list of products and users
                 List<ProductItem> products = db.GetProductItems();
-
+                List<UserItem> users = db.GetUserItems();
+                
                 VendingTransaction vendTrans = new VendingTransaction()
                 {
-                    Date = DateTime.UtcNow
+                    Date = DateTime.UtcNow,
+                    UserId = users[0].Id
                 };
                 vendTrans.Id = db.AddVendingTransaction(vendTrans);
 

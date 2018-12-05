@@ -1,14 +1,15 @@
 ﻿.footer {
     position: relative;
-    text-align:center;
-    background-color:cornflowerblue;
-    padding:5px;
+    text-align: center;
+    background-image: linear-gradient(to right, black, cornflowerblue) !important;
+    padding: 5px;
     left: 0;
     bottom: 0;
     right: 0;
     width: 100%;
     font-weight: bold;
-    font-size:small;
+    font-size: small;
+    color:white;
 }
 
 .wrapper {
@@ -49,4 +50,11 @@ html {
 }
 .VNDR{
     color:white !important;
+}
+.jumboMove{
+    padding-top:0px!important;
+    padding-bottom:0px!important;
+}
+.motto {
+    margin-bottom: 0px !important;
 }

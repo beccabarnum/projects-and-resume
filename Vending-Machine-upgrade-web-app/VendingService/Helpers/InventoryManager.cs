@@ -56,7 +56,23 @@ namespace VendingService.Helpers
             return _inventory[key];
         }
 
-        
+        /// <summary>
+        /// Reduces the qty of the vending item by 1 if there is at least 1 item left in the slot
+        /// </summary>
+        /// <param name="row">The 1 based row for the item</param>
+        /// <param name="col">The 1 based col for the item</param>
+        public void PurchaseItem(int row, int col)
+        {
+            var item = GetVendingItem(row, col);
+            if(item.Inventory.Qty == 0)
+            {
+                throw new Exception("Product is sold out.");
+            }
+            else
+            {
+                item.Inventory.Qty--;
+            }
+        }        
 
         /// <summary>
         /// Determines if the product is left in the machine

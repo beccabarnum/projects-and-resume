@@ -21,6 +21,7 @@ namespace VendingIntegrationTests
         private int _productId = BaseItem.InvalidId;
         private int _inventoryId = BaseItem.InvalidId;
         private int _vendingTransactionId = BaseItem.InvalidId;
+        private int _userId = BaseItem.InvalidId;
 
         /// <summary>
         /// Set up the database before each test  
@@ -30,6 +31,17 @@ namespace VendingIntegrationTests
         {
             // Initialize a new transaction scope. This automatically begins the transaction.
             _tran = new TransactionScope();
+            
+            if (_userId == BaseItem.InvalidId)
+            {
+                var temp = new CategoryItem() { Id = BaseItem.InvalidId };
+                temp.Name = "TestCategory";
+                temp.Noise = "CategoryNoise";
+
+                // Add category item
+                _categoryId = _db.AddCategoryItem(temp);
+                Assert.AreNotEqual(0, _categoryId);
+            }
 
             if (_categoryId == BaseItem.InvalidId)
             {
@@ -232,6 +244,7 @@ namespace VendingIntegrationTests
 
             VendingTransaction itemGet = _db.GetVendingTransaction(id);
             Assert.AreEqual(item.Id, itemGet.Id);
+            Assert.AreEqual(item.UserId, itemGet.UserId);
             Assert.AreEqual(item.Date.ToString(), itemGet.Date.ToString());
 
             // Test get vending transactions

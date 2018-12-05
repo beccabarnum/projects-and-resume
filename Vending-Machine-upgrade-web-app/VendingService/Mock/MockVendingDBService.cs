@@ -13,6 +13,11 @@ namespace VendingService.Mock
     {
         public MockVendingDBService()
         {
+            if (_userItems.Count == 0)
+            {
+                TestManager.PopulateDatabaseWithUsers(this);
+            }
+
             if (_inventoryItems.Count == 0)
             {
                 TestManager.PopulateDatabaseWithInventory(this);
@@ -26,12 +31,14 @@ namespace VendingService.Mock
 
         #region Variables
 
+        private static Dictionary<int, UserItem> _userItems = new Dictionary<int, UserItem>();
         private static Dictionary<int, CategoryItem> _categoryItems = new Dictionary<int, CategoryItem>();
         private static Dictionary<int, InventoryItem> _inventoryItems = new Dictionary<int, InventoryItem>();
         private static Dictionary<int, ProductItem> _productItems = new Dictionary<int, ProductItem>();
         private static Dictionary<int, VendingTransaction> _vendingTransactions = new Dictionary<int, VendingTransaction>();
         private static Dictionary<int, TransactionItem> _transactionItems = new Dictionary<int, TransactionItem>();
 
+        private static int _userId = 1;
         private static int _categoryId = 1;
         private static int _productId = 1;
         private static int _inventoryId = 1;
@@ -301,6 +308,19 @@ namespace VendingService.Mock
             return items;
         }
 
+        public List<VendingTransaction> GetVendingTransactionsForUser(int userId)
+        {
+            List<VendingTransaction> items = new List<VendingTransaction>();
+            foreach (var item in _vendingTransactions)
+            {
+                if (item.Value.UserId == userId)
+                {
+                    items.Add(item.Value.Clone());
+                }
+            }
+            return items;
+        }
+
         #endregion
 
         #region TransactionItem
@@ -370,6 +390,89 @@ namespace VendingService.Mock
                 }
             }
             return items;
+        }
+
+        #endregion
+
+        #region UserItem
+
+        public int AddUserItem(UserItem item)
+        {
+            item.Id = _userId++;
+            _userItems.Add(item.Id, item.Clone());
+            return item.Id;
+        }
+
+        public bool UpdateUserItem(UserItem item)
+        {
+            if (_userItems.ContainsKey(item.Id))
+            {
+                _userItems[item.Id] = item.Clone();
+            }
+            else
+            {
+                throw new Exception("Item does not exist.");
+            }
+            return true;
+        }
+
+        public void DeleteUserItem(int userId)
+        {
+            if (_userItems.ContainsKey(userId))
+            {
+                _userItems.Remove(userId);
+            }
+            else
+            {
+                throw new Exception("Item does not exist.");
+            }
+        }
+
+        public UserItem GetUserItem(int userId)
+        {
+            UserItem item = null;
+
+            if (_userItems.ContainsKey(userId))
+            {
+                item = _userItems[userId];
+            }
+            else
+            {
+                throw new Exception("Item does not exist.");
+            }
+
+            return item.Clone();
+        }
+
+        public List<UserItem> GetUserItems()
+        {
+            List<UserItem> items = new List<UserItem>();
+            foreach (var item in _userItems)
+            {
+                items.Add(item.Value.Clone());
+            }
+            return items;
+        }
+
+        public UserItem GetUserItem(string username)
+        {
+            UserItem item = null;
+
+            foreach (var user in _userItems)
+            {
+                if (user.Value.Username == username)
+                {
+                    item = user.Value;
+                    break;
+                }
+            }
+
+            if(item == null)
+            {
+                throw new Exception("Item does not exist.");
+            }
+
+            return item.Clone();
         }
 
         #endregion

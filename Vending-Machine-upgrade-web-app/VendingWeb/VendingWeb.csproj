@@ -109,6 +109,8 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Vending\About.css" />
+    <Content Include="Content\Vending\Login.css" />
+    <Content Include="Content\Vending\Register.css" />
     <Content Include="Global.asax" />
     <Content Include="Images\becca.jpg" />
     <Content Include="Images\chris.jpg" />
@@ -163,6 +165,8 @@
     <Content Include="Content\Vending\Vending.css" />
     <Content Include="Scripts\Vending\About.js" />
     <Content Include="Scripts\Vending\Log.js" />
+    <Content Include="Scripts\Vending\Login.js" />
+    <Content Include="Scripts\Vending\Register.js" />
     <Content Include="Scripts\Vending\Report.js" />
     <Content Include="Scripts\Vending\Vending.js" />
     <Content Include="Web.config">
@@ -171,6 +175,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\VendingApiController.cs" />
+    <Compile Include="Controllers\VendingBaseController.cs" />
     <Compile Include="Controllers\VendingController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -178,6 +185,8 @@
     <Compile Include="Model\Constants.cs" />
     <Compile Include="Model\ViewModels\ChangeViewModel.cs" />
     <Compile Include="Model\ViewModels\InventoryViewModel.cs" />
+    <Compile Include="Model\ViewModels\LoginViewModel.cs" />
+    <Compile Include="Model\ViewModels\RegisterViewModel.cs" />
     <Compile Include="Model\ViewModels\StatusViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -201,6 +210,8 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Vending\About.cshtml" />
+    <Content Include="Views\User\Login.cshtml" />
+    <Content Include="Views\User\Register.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

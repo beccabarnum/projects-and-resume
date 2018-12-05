@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-    //$("#datepicker").datepicker();
     let ajaxURL = "http://localhost:55801/api/log"; // <--- changes depending on port used
     ajaxCall();
     $(".active").removeClass("active");
@@ -33,8 +32,8 @@
                     let logBlock = $("<div>").addClass("row");
                     logBlock.append($("<div>").addClass("col-sm-1"));
 
-                    let date = $("<div>").html(data[i].TimeStampStr).addClass("col");
-                    let transaction = $("<div>").addClass("col");
+                    let date = $("<div>").html(data[i].TimeStampStr).addClass("col-3");
+                    let transaction = $("<div>").addClass("col-4");
                     if (data[i].OperationType == 1) {
                         transaction.html("FEED MONEY:");
                     }
@@ -44,8 +43,8 @@
                     else {
                         transaction.html(data[i].ProductName);
                     }
-                    let price = $("<div>").html("$" + data[i].Price.toFixed(2)).addClass("col");
-                    let amount = $("<div>").html("$" + data[i].RunningTotal.toFixed(2)).addClass("col");
+                    let price = $("<div>").html("$" + data[i].Price.toFixed(2)).addClass("col-2");
+                    let amount = $("<div>").html("$" + data[i].RunningTotal.toFixed(2)).addClass("col-1");
 
 
                     logBlock.append(date);

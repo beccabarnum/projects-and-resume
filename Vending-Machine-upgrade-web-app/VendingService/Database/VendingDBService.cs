@@ -504,6 +504,11 @@ namespace VendingService.Database
             return item;
         }
 
+        public List<VendingTransaction> GetVendingTransactionsForUser(int userId)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         #region TransactionItem Methods
@@ -621,6 +626,40 @@ namespace VendingService.Database
             item.SalePrice = Convert.ToDouble(reader["SalePrice"]);
 
             return item;
+        }
+
+        #endregion
+
+        #region UserItem Methods
+
+        public int AddUserItem(UserItem item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool UpdateUserItem(UserItem item)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteUserItem(int userId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public UserItem GetUserItem(int userId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<UserItem> GetUserItems()
+        {
+            throw new NotImplementedException();
+        }
+
+        public UserItem GetUserItem(string username)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

@@ -1,9 +1,11 @@
 ﻿@section StyleSheet {
     <link rel="stylesheet" href="~/Content/Vending/Log.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
 }
 
 @section Scripts {
     <script src="~/Scripts/Vending/Log.js" defer></script>
+
 }
 
 @section Title {
@@ -12,7 +14,7 @@
 
 
 <div class="container" id="logBox">
-
+    <input type="text" id="datepicker">
     <div class="logHeading">
         <div class="logTitle">Log</div>
 
@@ -29,16 +31,16 @@
     <div class="row headerRow">
 
         <div class="col-sm-1"></div>
-        <div class="col content">
+        <div class="col-3 content">
             Date
         </div>
-        <div class="col transaction content">
+        <div class="col-4 transaction content">
             Action
         </div>
-        <div class="col amount content">
-            Amount
+        <div class="col-2 amount content">
+            Amt
         </div>
-        <div class="col runnTotal content">
+        <div class="col-1 runnTotal content">
             Total
         </div>
         <div class="col-sm-1"></div>
